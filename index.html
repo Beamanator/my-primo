@@ -111,47 +111,97 @@ new Glider(document.querySelector('.glider'), {
  
     </script>
 			</div>
-			<div class="primo-component" id="component-wnoon">
-				<div id="component-wnoon" class="w-full"><div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div class="text-gray-800 bg-white shadow-xl p-8 rounded-lg">
-            	<img class="mb-8 h-64 w-full object-cover object-center" src="https://images.unsplash.com/photo-1507097672537-2b0effc54687?ixlib&#x3D;rb-1.2.1&amp;ixid&#x3D;eyJhcHBfaWQiOjEyMDd9&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1255&amp;q&#x3D;80" alt="Tree" />
-            <h2 class="text-2xl font-bold">Chronic Care Management (CCM)</h2>
-            <div class="text-xl"><p>Description…</p></div>
-            	<a href="#" class="bg-gray-700 hover:bg-gray-800 text-white font-semibold px-5 py-3 mt-6 inline-block transition-colors duration-200">Learn More</a>
-        </div>
-        <div class="text-gray-800 bg-white shadow-xl p-8 rounded-lg">
-            	<img class="mb-8 h-64 w-full object-cover object-center" src="https://images.unsplash.com/photo-1604043155802-e929b1c20738?ixlib&#x3D;rb-1.2.1&amp;ixid&#x3D;eyJhcHBfaWQiOjEyMDd9&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1267&amp;q&#x3D;80" alt="Forest" />
-            <h2 class="text-2xl font-bold">Annual Wellness Visits (AWV)</h2>
-            <div class="text-xl"><p>Description…</p></div>
-            	<a href="#" class="bg-gray-700 hover:bg-gray-800 text-white font-semibold px-5 py-3 mt-6 inline-block transition-colors duration-200">Learn More</a>
-        </div>
-        <div class="text-gray-800 bg-white shadow-xl p-8 rounded-lg">
-            	<img class="mb-8 h-64 w-full object-cover object-center" src="https://images.unsplash.com/photo-1604060361232-0213c2ad2eaa?ixlib&#x3D;rb-1.2.1&amp;ixid&#x3D;eyJhcHBfaWQiOjEyMDd9&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1350&amp;q&#x3D;80" alt="Metro" />
-            <h2 class="text-2xl font-bold">Advance Care Planning (ACP)</h2>
-            <div class="text-xl"><p>Description…</p></div>
-            	<a href="#" class="bg-gray-700 hover:bg-gray-800 text-white font-semibold px-5 py-3 mt-6 inline-block transition-colors duration-200">Learn More</a>
-        </div>
-        <div class="text-gray-800 bg-white shadow-xl p-8 rounded-lg">
-            <h2 class="text-2xl font-bold">Remote Physiologic Monitoring (RPM)</h2>
-            <div class="text-xl"><p>Description…</p></div>
-        </div>
-        <div class="text-gray-800 bg-white shadow-xl p-8 rounded-lg">
-            <h2 class="text-2xl font-bold">Transitional Care Management (TCM)</h2>
-            <div class="text-xl"><p>Description…</p></div>
-        </div>
-</div></div>
-				<script type="module"></script>
-			</div>
-			<div class="primo-copy" id="copy-3qda2">
-				
-			</div>
 		</div>
 	</div>
 </div>
 <div id="section-ywzec">
 	<div class="columns flex flex-wrap container">
 		<div class="column w-full" id="column-tk9wq">
-			<div class="primo-copy" id="copy-hsbpn">
+			<div class="primo-copy" id="copy-r1pun">
+				
+			</div>
+			<div class="primo-component" id="component-ko1xn">
+				<div id="component-ko1xn" class="w-full"><div id="container">
+    <header>
+        <img class="activator" id="activator" src="https://s.svgbox.net/hero-outline.svg?ic=annotation&fill=000" width="32" height="32">
+        <nav>
+            <ul>
+                <li><a href="#"><img src="https://s.svgbox.net/hero-outline.svg?ic=archive&fill=000" width="32" height="32"></a></li>
+                <li><a href="#"><img src="https://s.svgbox.net/hero-outline.svg?ic=cake&fill=000" width="32" height="32"></a></li>
+                <li><a href="#"><img src="https://s.svgbox.net/hero-outline.svg?ic=briefcase&fill=000" width="32" height="32"></a></li>
+                <li><a href="#"><img src="https://s.svgbox.net/hero-outline.svg?ic=camera&fill=000" width="32" height="32"></a></li>
+                <li><a href="#"><img src="https://s.svgbox.net/hero-outline.svg?ic=calendar&fill=000" width="32" height="32"></a></li>
+            </ul>
+        </nav>
+    </header>
+</div></div>
+				<script type="module">
+      const primo = {
+        id: 'ko1xn',
+        data: {"id":"ko1xn"},
+        fields: []
+      }
+      // turn [import _ from 'lodash'] into [import _ from 'https://cdn.skypack.dev/lodash'];
+      import gsap from 'https://cdn.skypack.dev/gsap';
+// import plugin from 'https://cdn.skypack.dev/gsap/CSSPlugin'
+
+// Force CSSPlugin to not get dropped during build
+// gsap.registerPlugin(plugin)
+
+var card = document.getElementById('activator');
+
+var tl = gsap.timeline({ defaults: { ease: "power2.inOut"} });
+
+let toggle = false;
+
+tl.to('.activator', { background: '#805ad5', 'borderRadius': '5em 0 0 5em' })
+tl.to('nav', {
+	clickPath: 'ellipse(100% 100% at 50% 50%)'
+}, '-=.5')
+tl.to('nav img', {
+	opacity: 1,
+    transform: 'translateX(0)',
+    stagger: .05
+}, '-=.5')
+tl.pause();
+
+card.addEventListener('click', () => {
+	toggle = !toggle;
+    if (toggle) tl.play();
+    else tl.reverse();
+})
+
+
+console.log('..') 
+    </script>
+			</div>
+			<div class="primo-component" id="component-3pkfp">
+				<div id="component-3pkfp" class="w-full"><div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="text-gray-800 bg-white shadow-xl p-8 rounded-lg">
+            <h2 class="text-2xl font-bold">Chronic Care Management (CCM) </h2>
+            <div class="text-xl"><p>Description…</p></div>
+        </div>
+        <div class="text-gray-800 bg-white shadow-xl p-8 rounded-lg">
+            <h2 class="text-2xl font-bold">Annual Wellness Visits (AWV)</h2>
+            <div class="text-xl"></div>
+        </div>
+        <div class="text-gray-800 bg-white shadow-xl p-8 rounded-lg">
+            <h2 class="text-2xl font-bold">Advance Care Planning (ACP)</h2>
+            <div class="text-xl"><p>Description (optional)…</p></div>
+        </div>
+        <div class="text-gray-800 bg-white shadow-xl p-8 rounded-lg">
+            <h2 class="text-2xl font-bold">Remote Physiologic Monitoring (RPM)</h2>
+            <div class="text-xl"></div>
+        </div>
+        <div class="text-gray-800 bg-white shadow-xl p-8 rounded-lg">
+            <h2 class="text-2xl font-bold">Transitional Care Management (TCM)</h2>
+            <div class="text-xl"></div>
+        </div>
+</div>
+</div>
+				<script type="module"></script>
+			</div>
+			<div class="primo-copy" id="copy-uj5vu">
 				
 			</div>
 		</div>
