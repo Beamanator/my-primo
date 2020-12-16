@@ -124,7 +124,7 @@ new Glider(document.querySelector('.glider'), {
 				<div id="component-ko1xn" class="w-full"><div id="container">
     <header>
         <img class="activator" id="activator" src="https://s.svgbox.net/hero-outline.svg?ic=annotation&fill=000" width="32" height="32">
-        <nav>
+        <nav id="custom-nav">
             <ul>
                 <li><a href="#"><img src="https://s.svgbox.net/hero-outline.svg?ic=archive&fill=000" width="32" height="32"></a></li>
                 <li><a href="#"><img src="https://s.svgbox.net/hero-outline.svg?ic=cake&fill=000" width="32" height="32"></a></li>
@@ -155,10 +155,10 @@ var tl = gsap.timeline({ defaults: { ease: "power2.inOut"} });
 let toggle = false;
 
 tl.to('.activator', { background: '#805ad5', 'borderRadius': '5em 0 0 5em' })
-tl.to('nav', {
-	clickPath: 'ellipse(100% 100% at 50% 50%)'
+tl.to('#custom-nav', {
+	clipPath: 'ellipse(100% 100% at 50% 50%)'
 }, '-=.5')
-tl.to('nav img', {
+tl.to('#custom-nav img', {
 	opacity: 1,
     transform: 'translateX(0)',
     stagger: .05
