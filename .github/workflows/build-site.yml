@@ -38,4 +38,5 @@ jobs:
       # Runs an npm script
       - name: Build Site
         run: npm run build-site
-        env: ${{ secrets.OCTOKIT_TOKEN }}
+        env:
+          OCTOKIT_TOKEN: ${{ secrets.OCTOKIT_TOKEN }}
