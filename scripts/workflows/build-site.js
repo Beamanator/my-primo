@@ -4,7 +4,7 @@ console.log("init Octokit");
 
 // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
 const octokit = new Octokit({
-    auth: `c02a5600b65808c974375293935833eba1337091`,
+    auth: process.env.OCTOKIT_TOKEN || "",
 });
 
 console.log("get file");
