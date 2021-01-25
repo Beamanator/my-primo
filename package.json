@@ -1,5 +1,5 @@
 {
     "scripts": {
-        "build-site": "node scripts/workflows/build-site.js"
+        "build-site": "cd /scripts/workflows && npm install && node build-site.js"
     }
 }
