@@ -34,6 +34,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # https://github.com/actions/cache/blob/main/examples.md#node---npm
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm  
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       
       # Runs an npm script
       - name: Build Site
